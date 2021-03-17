@@ -1,7 +1,7 @@
 # High-order-GNN-LF-iter
 High-order-GNN-LF-iter framewrok on 3D Human Pose estimation
 
-This repository holds the Pytorch implementation of [Interpreting and Unifying Graph Neural Networks with AnOptimization Framework](https://arxiv.org/pdf/2101.11859.pdf) by Zhu, Meiqi and Wang, Xiao and Shi, Chuan and Ji, Houye and Cui, Peng. Citation information:
+This repository holds the extension Pytorch implementation based on [Interpreting and Unifying Graph Neural Networks with AnOptimization Framework](https://arxiv.org/pdf/2101.11859.pdf) by Zhu, Meiqi and Wang, Xiao and Shi, Chuan and Ji, Houye and Cui, Peng. Citation information:
 
 ```
 @article{zhu2021interpreting,
