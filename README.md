@@ -1,6 +1,20 @@
 # High-order-GNN-LF-iter
 High-order-GNN-LF-iter framewrok on 3D Human Pose estimation
-In this section we apply GNN-LF iter framework with High-order concatenation techniques to build the model for 3D Human Pose estimation.  
+
+This repository holds the Pytorch implementation of [Interpreting and Unifying Graph Neural Networks with AnOptimization Framework](https://arxiv.org/pdf/2101.11859.pdf) by Zhu, Meiqi and Wang, Xiao and Shi, Chuan and Ji, Houye and Cui, Peng. Citation information:
+
+```
+@article{zhu2021interpreting,
+  title={Interpreting and Unifying Graph Neural Networks with An Optimization Framework},
+  author={Zhu, Meiqi and Wang, Xiao and Shi, Chuan and Ji, Houye and Cui, Peng},
+  journal={arXiv preprint arXiv:2101.11859},
+  year={2021}
+}
+```
+
+In this section we apply GNN-LF iter framework with High-order concatenation techniques to build the model for 3D Human Pose estimation. 
+We successfully reduce the prarameters from 1.20M to 0.69M and reach the similar results of High-order-GCNII(https://github.com/happyvictor008/HIgh-order-GCNII).
+
 ### Results on Human3.6M
 
 CPN detection rtesluts under Protocol 1 (mean per-joint position error) and Protocol 2 (mean per-joint position error after rigid alignment).
@@ -8,10 +22,10 @@ CPN detection rtesluts under Protocol 1 (mean per-joint position error) and Prot
 | Method | 2D Detections | # of Epochs | # of Parameters | MPJPE (P1) | P-MPJPE (P2) |
 |:-------|:-------:|:-------:|:-------:|:-------:|:-------:|
 | HGCN   | CPN deteciton | 50 |  1.20M  | 55.60 mm | 43.70 mm |
-| HGCNII(Ours)   | CPN deteciton | 50 |  1.20M  | ""54.80 mm"" | ""42.90"" mm |
-| HGFL(Ours)   | CPN deteciton | 50 |  ""0.69M""  | 55.01 mm | 42.98 mm |
+| HGCNII(Ours)   | CPN deteciton | 50 |  1.20M  | **54.80 mm** | **42.90** mm |
+| HGFL(Ours)   | CPN deteciton | 50 |  **0.69M**  | 55.01 mm | 42.98 mm |
 
-The results are borrowed from [SemGCN](https://github.com/garyzhao/SemGCN) and [High-order GCN](https://github.com/ZhimingZo/HGCN).
+The results are borrowed from [SemGCN](https://github.com/garyzhao/SemGCN), [High-order GCN](https://github.com/ZhimingZo/HGCN) and [High-order GCNII](https://github.com/happyvictor008/HIgh-order-GCNII).
 
 
 
@@ -21,8 +35,8 @@ The results are borrowed from [SemGCN](https://github.com/garyzhao/SemGCN) and [
 This repository is build upon Python v3.7 and Pytorch v1.3.1 on Anaconda. All experiments are conducted on a single NVIDIA RTX 2070 Super GPU. See [`requirements.txt`](requirements.txt) for other dependencies. We recommend installing Python v3.7 from [Anaconda](https://www.anaconda.com/) and installing Pytorch (>= 1.3.1) following guide on the [official instructions](https://pytorch.org/) according to your specific CUDA version. Then you can install dependencies with the following commands.
 
 ```
-git clone https://github.com/happyvictor008/HIgh-order-GCNII.git
-cd HIgh-order-GCNII
+git clone https://github.com/happyvictor008/High-order-GNN-LF-iter.git
+cd High-order-GNN-LF-iter
 pip install -r requirements.txt
 ```
 
@@ -85,6 +99,7 @@ This code is extended from the following repositories.
 - [3d_pose_baseline_pytorch](https://github.com/weigq/3d_pose_baseline_pytorch)
 - [VideoPose3D](https://github.com/facebookresearch/VideoPose3D)
 - [Semantic GCN](https://github.com/garyzhao/SemGCN)
+- [High-order GCN](https://github.com/ZhimingZo/HGCN.git)
 
 Thank the authors for releasing their codes. Please also consider citing their works.
 
